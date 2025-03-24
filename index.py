@@ -59,12 +59,10 @@ class Admin:
 
 
 #customer class
-class Customer:
-    def __init__(self,admin):
+class Customer(Admin):
+    def __init__(self):
         self.balance = 0
         self.order_cart = []
-        self.admin = admin
-
 
 
         #self.ahmed=Admin()
@@ -81,35 +79,19 @@ class Customer:
         return self.order_cart
 
     def view_menus(self):
-        return self.admin.view_menu()
+        pass
 
 
-admins = Admin()
-admins.add_menu()
-customers = Customer(admins)
-print(customers.view_menus())
+
 
 
 
 # Resturent class
 
 class Resturant:
-    def __init(self,admin):
-        self.admin = admin
-
 
     def manage_menu(self):
-        return self.admin.view_menu()
-
-    def manage_customer_account(self):
-        return self.admin.view_customer()
-
-    def replice_menu(self):
-        carts = admins.cart
-        return carts
-
-
-
+        pass
 
 
 
